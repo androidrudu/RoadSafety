@@ -1,0 +1,344 @@
+<resources>
+    <string name="app_name">rudu</string>
+    <string name="label_splash_bottom">Making your drive a memorable one\nSafe  Coming Home</string>
+    <string name="splash_desc">Realtime \nOnboard \nAssessment of \nDriving behaviour</string>
+    <!--Verification Password-->
+    <string name="label_getverified">Get Verified</string>
+    <string name="label_but_join">JOIN</string>
+
+    <!--Register Page-->
+    <string name="label_hint_name">Name</string>
+    <string name="label_hint_country">Country</string>
+    <string name="label_hint_continent">Continent</string>
+    <string name="label_hint_email_opt">Email (Optional)</string>
+    <string name="label_but_submit">SUBMIT</string>
+    <string name="label_verify_code">Verification code will be sent to this number</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="settings">Settings</string>
+    <!--ROAD start-->
+    <string name="location_updated">Location Updated: %1$s</string>
+
+    <!--About-->
+    <string name="label_about">About</string>
+    <!--Terms & Conditions-->
+    <string name="label_terms_conditions">Terms &amp; Conditions</string>
+    <!--Get Start-->
+    <string name="label_get_start">GET START</string>
+    <string name="label_welcome_start">Welcome to Road app, please fill up this below details to serve you better</string>
+    <string name="label_thanks">Thanks and Enjoy the great experience!</string>
+    <string name="label_personal_info">Personal Information</string>
+    <string name="label_app_setting">App Settings</string>
+    <string name="label_hint_age">Age</string>
+    <string name="label_hint_emer_mobile">Emergency Contact Number</string>
+    <string name="label_hint_lic_date">Driving license issue Date</string>
+    <string name="label_app_notif">App notifications</string>
+    <string name="label_start_bg">Starting on Background</string>
+    <string name="label_speed_beep">Speed Limit Beep</string>
+    <string name="label_beep">Beep</string>
+    <string name="label_bluetooth">Bluetooth</string>
+    <string name="label_voice_alert">Voice Alert</string>
+    <string name="label_co_pilot_mode">Co-Pilot Mode</string>
+    <string name="label_Save">Save &#38; Start</string>
+    <string name="label_Save_gn">Save</string>
+    <string name="loading_bluetooth_title">Bluetooth Connecting .....</string>
+
+
+    <!--Global dashboard-->
+    <string name="global_dash">Global Dashboard</string>
+
+    <!--Dashboard-->
+    <string name="label_drive_score">Safe Driving Score</string>
+    <string name="label_drive_tip">Driving Tips</string>
+    <string name="tv_driving_tip">Actively pay attention to your actions and those of the drivers around you when you are driving</string>
+    <string name="drivingtip_two">Familiarize yourself with the controls and release the handbrake before you start rolling</string>
+    <string name="drivingtip_three">Find the best seating position for you and adjust the mirrors</string>
+    <string name="drivingtip_four">Check the surroundings while reverse parking your car</string>
+    <string name="drivingtip_five">Use turn signals and check mirrors before splitting lanes</string>
+    <string name="drivingtip_six">Slow down before turning and maintain a consistent speed throughout the turn</string>
+    <string name="tv_driving_score">Last 3 Driving Score</string>
+    <string name="tv_date">15/04/2021</string>
+    <string name="km"><font color='#9F9F9F'>KM</font></string>
+    <string name="am"><font color='#9F9F9F'>AM</font></string>
+    <string name="tv_mins">100:33</string>
+    <string name="tv_time">10:09</string>
+    <string name="tv_dist"> 04:22</string>
+    <string name="tv_score">Driving Score</string>
+    <string name="tv_ride">Rides</string>
+    <string name="tv_dashboard">Dashboard</string>
+    <string name="tv_more">More</string>
+
+    <!--My Rides-->
+    <string name="label_my_rides">My Rides</string>
+
+    <!--More-->
+
+    <!--Report-->
+    <string name="label_report">Report a Problem</string>
+
+    <!--Settings-->
+    <string name="label_settings">Settings</string>
+    <string name="label_gen_settings">General Settings</string>
+    <string name="label_car_settings">Car Settings</string>
+    <string name="label_app_sett">App Settings</string>
+
+    <!--Rides detail-->
+    <string name="label_Rides">07 MAY 2021</string>
+    <string name="tv_risk_chart">Trip Risk Chart</string>
+    <string name="label_alert">Risk Alert Context</string>
+    <string name="label_alert_map">Risk Alert - Map View</string>
+    <string name="label_alert_list">Risk Alerts</string>
+
+    <string name="title_trip">Trip</string>
+    <string name="title_alert">Alert</string>
+    <string name="title_time">Time <br /><font size="10">(HH:MM)</font></string>
+    <string name="title_distance">Distance  <br /><font size="10">(KM)</font></string>
+    <string name="title_speed">Speed\n<font size="10">(KM/H)</font></string>
+    <string name="title_zip">Zipcode</string>
+    <string name="title_sl_ps">SL/PS\n<font size="10">(KM/H)</font></string>
+
+    <!--Installing Map-->
+    <string name="label_installing_map">INSTALLING MAP</string>
+    <string name="label_choose">Please select your continent and country</string>
+    <string name="label_experience_map">We are setting up local map on the app for \n your seemless experience</string>
+    <!--Installing map view-->
+    <string name="label_map_view_experience">We are setting up local map on the app for \n your seemless experience</string>
+    <string name="label_please_wait">Please wait for a while...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--Login-->
+
+    <string name="valid_email_address">Enter Valid Email Address</string>
+    <string name="valid_phno">Enter Valid Mobile Number</string>
+    <string name="valid_emgcont">Enter Valid Emergency Number</string>
+    <string name="valid_password">Enter Valid Password</string>
+    <string name="valid_password_len">Password Must Have Minimum 8 Characters</string>
+    <string name="valid_date">Enter Date</string>
+    <string name="enter_mob_pwd">Enter Your Mobile Number And Password  </string>
+    <string name="enter_phn">Enter Your Mobile Number</string>
+    <string name="conf_pwd">Enter Your Confirm Password</string>
+    <string name="new_pwd">Enter Your New Password</string>
+    <string name="val_conf_pwd">Enter Valid Confirm Password</string>
+    <string name="val_new_pwd">Enter Valid New Password</string>
+    <string name="enter_pwd">Enter Your Password</string>
+    <string name="valid_phn_pass">Enter Valid Mobile Number And Password</string>
+    <string name="valid_Age_empty">Age Is Empty</string>
+
+    <string name="title_anticip">Anticipation</string>
+    <string name="desc_anticip">Anticipation capability of driver (speed)</string>
+
+    <string name="title_Self_Conf">Self Confidence</string>
+    <string name="desc_self_conf">Listening to alerts</string>
+
+    <string name="title_driving_skill">Driving Skill</string>
+    <string name="desc_driving_skill">Repeatability of same driving risk</string>
+
+    <!--Register-->
+    <string name="enter_name">Enter Your Name</string>
+    <string name="select_country">Select Country</string>
+    <string name="agree_terms">Please Agree Terms &amp; Service</string>
+    <string name="fill_personal">Please Fill And Save Personal Information</string>
+
+    <string name="search_format">DD/MM/YYYY</string>
+    <string name="hint_map_country">Country</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+
+    <!--Forgot Password-->
+    <string name="txt_forgot_new_password_title">New Password</string>
+    <string name="txt_forgot_con_password_title">Confirm Password</string>
+    <string name="btn_setPassword">Reset Password</string>
+    <string name="pass_not_match">Password Does Not Match</string>
+
+    <!--Settings-->
+    <string name="setting_update">Settings Updated</string>
+
+    <!--OBD starts-->
+    <!--  <string name="app_name">OBD-II Reader</string>-->
+    <string name="action_clear_codes">Clear Codes</string>
+    <string name="notification_action">Tap to open OBD-Reader</string>
+    <string name="service_starting">Starting OBD connection..</string>
+    <string name="service_started">OBD connection has started.</string>
+    <string name="title_activity_trouble_codes">Trouble Codes</string>
+    <string name="pref_upload_category_title">Data Upload</string>
+    <string name="pref_upload_category" translatable="false">upload_category</string>
+    <string name="title_activity_trips_list">TripsList</string>
+    <string name="menu_trip_list">Trips</string>
+    <string name="menu_item_trip_delete">Delete</string>
+    <string name="pref_gps_category" translatable="false">gps_category</string>
+    <string name="dialog_loading_title">Loading…</string>
+    <string name="dialog_loading_body">Loading application View, please wait…</string>
+    <string name="menu_start_live_data">Start Live Data</string>
+    <string name="menu_stop_live_data">Stop Live Data</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_get_dtc">Get DTC</string>
+    <string name="text_gps" translatable="false">GPS</string>
+    <string name="text_obd" translatable="false">OBD</string>
+    <string name="text_bluetooth" translatable="false">Bluetooth</string>
+    <string name="title_pref_obd">OBD Preferences</string>
+    <string name="title_pref_commands">OBD Commands</string>
+    <string name="title_pref_bluetooth" translatable="false">Bluetooth</string>
+    <string name="title_pref_gps" translatable="false">GPS</string>
+    <string name="text_no_bluetooth_id">Sorry, your device doesn\'t support Bluetooth</string>
+    <string name="text_bluetooth_disabled">You have Bluetooth disabled. Please enable it (using Mock service)</string>
+    <string name="text_bluetooth_nodevice">No Bluetooth device selected</string>
+    <string name="text_bluetooth_error_connecting">Cannot connect to bluetooth device!</string>
+    <string name="text_no_orientation_sensor">Orientation sensor missing?</string>
+    <string name="text_no_gps_support">Sorry, your device doesn\'t support or has disabled GPS.</string>
+    <string name="text_save_trip_not_available">Sorry, trip will not be saved.</string>
+    <string name="text_obd_command_failure">OBD command failure!</string>
+    <string name="text_dtc_no_data">No DTC stored</string>
+    <string name="status_bluetooth_disabled">disabled</string>
+    <string name="status_bluetooth_ok">ready</string>
+    <string name="status_bluetooth_connecting">connecting&#8230;</string>
+    <string name="status_bluetooth_connected">connected</string>
+    <string name="status_bluetooth_error_connecting">connection failed</string>
+    <string name="status_gps_fix">fix acquired</string>
+    <string name="status_gps_started">started</string>
+    <string name="status_gps_stopped">stopped</string>
+    <string name="status_gps_ready">ready</string>
+    <string name="status_gps_no_support">not available</string>
+    <string name="status_gps_not_used">not used</string>
+    <string name="status_obd_data">receiving data&#8230;</string>
+    <string name="status_obd_disconnected">disconnected</string>
+    <string name="status_obd_no_support">NA</string>
+    <string name="pref_upload_title">Enable Data Upload</string>
+    <string name="pref_upload_summaryOff">Enable http data upload</string>
+    <string name="pref_upload_summaryOn">Disable http data upload</string>
+    <string name="pref_upload_url_title">Upload URL</string>
+    <string name="pref_upload_url_summary">POST URL that will accept real-time data</string>
+    <string name="pref_vehicle_id_title">Vehicle ID</string>
+    <string name="pref_vehicle_id_summary">Optional unique id of this vehicle, used with uploaded data</string>
+    <string name="pref_bluetooth_title">Enable Bluetooth</string>
+    <string name="pref_bluetooth_summaryOff">Turn on Bluetooth</string>
+    <string name="pref_bluetooth_summaryOn">Turn off Bluetooth</string>
+    <string name="pref_bluetooth_list_devices_summary">List of paired bluetooth devices.</string>
+    <string name="pref_bluetooth_list_devices_title">Bluetooth Devices</string>
+    <string name="pref_gps_category_title">Enable GPS</string>
+    <string name="pref_gps_category_summaryOff">Turn on GPS</string>
+    <string name="pref_gps_category_summaryOn">Turn off GPS</string>
+    <string name="pref_gps_update_period_title">Update Period in Seconds</string>
+    <string name="pref_gps_update_period_summary">The length of time between querying new position in seconds</string>
+    <string name="pref_gps_distance_period_title">Update Period in Meters</string>
+    <string name="pref_gps_distance_period_summary">Min Distance between location updates, in meters</string>
+    <string name="pref_obd_protocols_title">OBD Protocol</string>
+    <string name="pref_obd_protocols_summary">Select OBD Protocol to use</string>
+    <string name="pref_imperial_units_title">Imperial Units</string>
+    <string name="pref_imperial_units_summaryOff">Enable imperial units</string>
+    <string name="pref_imperial_units_summaryOn">Go back to metric units</string>
+    <string name="pref_obd_update_period_title">Update Period in Seconds</string>
+    <string name="pref_obd_update_period_summary">The length of time between querying vehicle data in seconds</string>
+    <string name="pref_max_fuel_econ_title">Maximum Fuel Economy Value</string>
+    <string name="pref_max_fuel_econ_summary">Any fuel economy values larger than this will be thrown out</string>
+    <string name="pref_volumetric_efficiency_dialog_title">Volumetric Efficiency (eg 0.85)</string>
+    <string name="pref_volumetric_efficiency_summary">Used for fuel economy on vehicles without MAF sensor</string>
+    <string name="pref_volumetric_efficiency_title">Volumetric Efficiency</string>
+    <string name="pref_engine_displacement_title">Engine Displacement (liters)</string>
+    <string name="pref_engine_displacement_summary">Used for fuel economy on vehicles without MAF sensor</string>
+    <string name="pref_reader_config_title">Reader Config Commands</string>
+    <string name="pref_reader_config_summary">Commands to configure bluetooth reader, separate with new line</string>
+    <string name="title_pref_commands_summary">Select the commands you would like to see in real-time.</string>
+    <string name="title_pref_commands_title">OBD Commands</string>
+    <string name="title_pref_full_logging"> Full logging configuration </string>
+    <string name="pref_enable_full_logging_summary"> Enables full offline logging with upload</string>
+    <string name="pref_enable_full_logging_title"> Enable full logging </string>
+    <string name="default_dirname_full_logging">OBDReaderLogs</string>
+    <string name="pref_dirname_dialogTitle">Choose the name of the directory to save the logs</string>
+    <string name="pref_dirname_title">Directory name</string>
+    <string name="pref_dirname_summary">Name of the directory where to save the files</string>
+    <string name="pref_dev_email_title">Developer Email</string>
+    <string name="pref_dev_email_summary">Logs will be emailed to this address</string>
+    <string name="text_noerrors">There were no errors found.!</string>
+    <string name="OBD_text">OBD DEVICE</string>
+    <string name="text_register">Registered successfully!</string>
+    <string name="text_profile_update">Profile Updated successfully!</string>
+    <string name="text_profile_image">Profile Image Updated successfully!</string>
+    <string name="text_activate">User Verified successfully!</string>
+    <string name="text_pers_info_added">Personal Information Saved Successfully</string>
+    <string name="text_App_setting_add">App Settings Saved Successfully</string>
+    <string name="text_Map_setting_add">Map Settings Saved Successfully</string>
+    <string name="text_no_record">No Record Found</string>
+    <string name="Connect_fail">Connection Failure</string>
+    <string name="retry_again">Retry Again</string>
+    <string name="remote_access">Remote Access</string>
+    <string name="json_empty">Json Empty</string>
+    <string name="check_internet">Please Check Your Internet Connection</string>
+    <string name="OBD_tit_lat">Latitude</string>
+    <string name="OBD_tit_lng">Longitude</string>
+    <string name="OBD_tit_altitude">Altitude</string>
+    <string name="OBD_tit_sat">Satellite</string>
+    <string name="on">Stop</string>
+    <string name="off">Play</string>
+    <!--OBD ends-->
+    //GPS String
+    <string name="gps_status">REGISTERED</string>
+    <string name="gps_type">SPEEDO_METER_DEVICE</string>
+    <string name="gps_type_data">SPEEDO_METER_DEVICE_DATA</string>
+
+    <string name="gps_START_DATA">START_DATA</string>
+    <string name="gps_END_DATA">END_DATA</string>
+    <string name="gps_ALERT_DATA">ALERT_DATA</string>
+    <string name="gps_DISTANCE_DATA">DISTANCE_DATA</string>
+    //Road Application
+
+    <!--wifi_credential_text-->
+    <string name="wifi_username">Username</string>
+    <string name="wifi_pass">Password</string>
+    <string name="wifi_ok">Ok</string>
+    <string name="wifi_Cancel">Cancel</string>
+    <string name="wifi_valid_uname_pass">Username or Password is Empty</string>
+
+
+    <!--road start-->
+    <string name="title_km_hour">Km/h</string>
+    <string name="txt_dont_have_acc">Don’t have an account?</string>
+    <string name="txt_regist">Register Now</string>
+    <string name="txt_welcome">Welcome !\nGlad to see you, Again!</string>
+    <string name="txt_Mobile_Number">Mobile Number</string>
+    <string name="txt_Password">Password</string>
+    <string name="txt_remember_me">Remember me</string>
+    <string name="txt_username">Username</string>
+    <string name="text_terms"><u>Terms  &amp; Conditions</u></string>
+    <string name="text_aleady_account">Already have an account?</string>
+    <string name="txt_login_now">Login Now</string>
+    <string name="txt_create_account">Create Account</string>
+    <string name="txt_regis">Hello ! Create your account</string>
+    <string name="txt_forg">Forgot Password?\nLet us reset it now!</string>
+    <string name="txt_for_btn_1">Send Code</string>
+    <string name="txt_rem_pass_login">Remember Password?</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_otp_verify">OTP Verification\nwith 4 digit code</string>
+    <string name="txt_verify">Verify</string>
+    <string name="txt_didnt_receive">Didn’t received code?</string>
+    <string name="txt_resend">Resend</string>
+    <string name="txt_new_passw">Create new password\nKeep it unique !</string>
+    <string name="txt_back_to_login">Back to Login</string>
+    <string name="txt_pass_changed">Password Changed Successfully!</string>
+    <string name="txt_feedback">Feedback</string>
+    <string name="txt_tit_email">Email</string>
+    <string name="txt_desc_report">Tell us how we can improve your experience \n Type here...</string>
+    <string name="text_back">Back</string>
+    <string name="text_scr_rec">Take a screen recording</string>
+    <string name="text_screenshot">Take a screenshot</string>
+    <string name="text_image_gall">Select from image gallery</string>
+    <string name="text_submit">Submit</string>
+    <string name="text_rateTitle">Rate Your Experience</string>
+    <string name="text_desc_empty">Enter your Description</string>
+    <string name="text_desc">Rate your Experience</string>
+    <string name="title_menu">Menu</string>
+    <string name="title_lang">Language</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_faqPage">Frequently Asked Questions (FAQ)</string>
+    <string name="title_anticipate">ANTICIPATION</string>
+    <string name="title_self_conf">SELF CONFIDENCE</string>
+    <string name="title_drive_skill">DRIVING SKILL</string>
+    <string name="title_my_profile">My Profile</string>
+    <string name="title_trip_risk_chart">Trip Risk Chart</string>
+    <string name="title_copyright">Copyrights © 2022 Motiv AI. All Rights Reserved.</string>
+    <string name="title_trip_risk_style_chart">Risk Style Chart</string>
+    <string name="title_trip_driving_style_chart">Driving Style Chart</string>
+    <string name="title_trip_driver_state_chart">Driver State Chart</string>
+
+</resources>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DashboardActivity">
+    <TextView
+        android:id="@+id/abt_hello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:gravity="left"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        android:paddingRight="40dp"
+        android:paddingBottom="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        ></TextView>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toTopOf="@+id/card_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abt_hello" />
+    <!--
+    <FrameLayout
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toTopOf="@+id/Drive_CardLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abt_header_layout"
+    -->
+    <!-- <androidx.constraintlayout.widget.ConstraintLayout
+         android:id="@+id/dashboard_select"
+         android:layout_width="match_parent"
+         android:layout_height="60dp"
+         android:gravity="center"
+         android:background="@android:color/white"
+         android:orientation="vertical"
+         app:layout_constraintBottom_toBottomOf="parent"
+         tools:ignore="MissingConstraints"
+
+         >-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_layout"
+        android:weightSum="3"
+        android:background="@color/dash_bot_bar_color"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Drive_CardLayout"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:elevation="0dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:visibility="visible"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/card_throttle"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dash_bot_bar_color">
+
+                <TextView
+                    android:id="@+id/drivingText"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/drivingView"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="@string/tv_score"
+                    android:textColor="@color/dash_bot_bar_color"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/drive_bg_layout"
+                    android:background="@drawable/dash_circle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/drivingText"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                <ImageView
+                    android:id="@+id/drivingView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/home_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/drive_highlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/circle"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/card_throttle"
+            app:layout_constraintEnd_toEndOf="@+id/ride_CardLayout"
+            app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+        <ImageView
+            android:id="@+id/card_throttle1"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/chauffer"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"></ImageView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_throttle"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:background="@color/transparent"
+            android:elevation="0dp"
+            android:visibility="visible"
+            app:cardElevation="0dp"
+            android:layout_weight="1"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ride_CardLayout"
+            app:layout_constraintStart_toEndOf="@+id/Drive_CardLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dash_bot_bar_color">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/throttle_bg_layout"
+                    android:background="@drawable/dash_circle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                <ImageView
+                    android:id="@+id/img_throttle"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/throttle_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@id/img_throttle"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text=""
+                    android:textColor="@color/dash_text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:id="@+id/throttle_highlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ride_CardLayout"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:elevation="0dp"
+            android:focusable="true"
+            android:visibility="visible"
+            app:cardElevation="0dp"
+            android:layout_weight="1"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/more_cardLayout"
+            app:layout_constraintStart_toEndOf="@+id/card_throttle"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dash_bot_bar_color"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/more_bg_layout"
+                    android:background="@drawable/dash_circle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/rideText"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                <ImageView
+                    android:id="@+id/rideView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingTop="1dp"
+                    android:src="@drawable/more_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/rideText"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/rideText"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/rideView"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="@string/tv_ride"
+                    android:textColor="@color/dash_text"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/more_highlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintRight_toLeftOf="@+id/more_cardLayout"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="8sp"
+
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/dashView"
+                android:src="@drawable/dash_icon"
+                android:paddingLeft="2sp"
+                android:paddingRight="2sp"
+                android:paddingTop="1dp"
+
+                />
+
+            <TextView
+                android:layout_below="@+id/dashView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/dashText"
+                android:text="@string/tv_dashboard"
+                android:layout_alignParentBottom="true"
+                android:padding="1dp"
+                android:gravity="center"
+                android:textColor="@color/dash_text"
+                android:textSize="10sp"
+
+                />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/more_cardLayout"
+        android:layout_width="0dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        android:layout_height="65dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ride_CardLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8sp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/moreView"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:padding="13sp"
+                android:src="@drawable/more_icon" />
+
+            <TextView
+                android:id="@+id/moreText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/moreView"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="@string/tv_more"
+                android:textColor="@color/dash_text"
+                android:textSize="10sp"
+
+                />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <com.rahimlis.badgedtablayout.BadgedTabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:overScrollMode="never"
+            app:badgeBackgroundColor="@color/black"
+            app:badgeTextColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorHeight="0dp"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabPadding="2dp"
+            tools:ignore="MissingConstraints"
+
+            />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

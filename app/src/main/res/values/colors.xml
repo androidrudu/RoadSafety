@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#000</color>
+    <color name="purple_700">#000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#dbdbdb</color>
+    <color name="gray">#7e7e7e</color>
+    <color name="dark_gray">#696969</color>
+    <color name="gray_txt">#9F9F9F</color>
+    <color name="color_grey">#dddddd</color>
+    <color name="dash_blue">#1034A6</color>
+
+
+    <color name="shadow">#d0d8dc</color>
+    <color name="transparent">#00000000</color>
+    <!--Design colors-->
+    <color name="yellow">#fff44f</color>
+    <color name="app_yellow">#fcdb00</color>
+    <color name="app_switch_on">#FCB000</color>
+    <color name="dash_text">#211F20</color>
+    <color name="red">#FC4300</color>
+    <color name="ride_green">#57B109</color>
+    <color name="ride_red"> #FC4300</color>
+    <color name="ride_amber">#FC9700</color>
+    <color name="blue_grp">#000080</color>
+    <color name="green_sped_mtr">#96CC39</color>
+
+    <color name="pie_blue">#6098C8</color>
+    <color name="pie_orange">#FD7C21</color>
+    <color name="pie_gray">#A8A6A3</color>
+    <color name="anti_desc_col">#7C7C7C</color>
+
+
+    <!--Verification code -->
+    <color name="color_resend_code">#21a7bc</color>
+    <color name="v2_app_color">#2C60D3</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#673AB7</color>
+    <color name="color_terms">#6B94F1</color>
+    <color name="color_cancel">#8B8B8B</color>
+    <color name="color_title">#555555</color>
+    <color name="text_desc_color">#E8E8E8</color>
+    <color name="color_submit">#31C173</color>
+    <color name="color_rating_activate">#6CC81C</color>
+    <color name="color_dash_line">#CACACA</color>
+    <color name="dash_bot_bar_color">#001A46</color>
+    <color name="graphblue">#3DBDC5</color>
+    <color name="graphgreen">#58B10A</color>
+    <color name="bg_grey_color">#E5E5E5</color>
+    <color name="dash_title_color">#1E293B</color>
+
+</resources>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.montbleu.roadsafety">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name="com.montbleu.singleton.Road_Application"
+        android:allowBackup="true"
+        android:configChanges="keyboardHidden|orientation"
+        android:excludeFromRecents="true"
+        android:icon="@drawable/rudu_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:noHistory="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/rudu_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RoadSafety"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.LastDriveSummary"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".activity.MyRidesPageActivity"
+            android:exported="true"
+            />
+
+        <activity
+            android:name=".activity.FaqActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".activity.languageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FeedbackActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.GlobalDashboardActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="kk9Z4ckPIusE2z8wsEuc" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="yCLXlyyiWx0-jpYvX-y8Bg" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="a80p40xlshT9edqdFELU72SayP5aA7kzHYafLp6/YBxXZ8O5sgDeQtizB/zNFXSkjLyhBtJm1N6EVsVJmIqfJ6lLGWd/cALBKQ/vEWthiWO+sNJgfIbdXyXIjkebKNybceiGW+b3v/2MRQQDVFkCCC69KwvGuLl5a7BcufmubB2Wjo0h8/uJV1oV2HHIHm2xgJQRemRH+pgZQgPLHB4Sj7c9Myz0RqK1vwmPMlEyP8Bq55otyk/EOJOdfqpeS3ZS76KmlklkGt6KbndOfk7kpidGwASUdPZ/EwR4j97dZaKd09Fyy3iJstclRNjMYV/l9JQltNoCXSoWb3O80pXOTcfsM7p0DUP7B/vUiMb8qWFy//Qm4sZ2l9PvQS1rTL+E8cnG9HritaxKCWqABe4wZp1mrpuFaay6ROKpN0hD+OGvccBWyYjUhPCauN+tNnLGfuvV7SBWJNts8OoqNa3WCX4I8cywuGB7Lc4BREpjquqZ2f+9owd6rMOpNG6DOhvp7MRRypf0mqgEsaRkJFyp3ZEcDqIfXeEt9GMetgW33bVTOewv5wu4H3m72PJ5UJveHM0An+sGGLjoqdK9BuyrWT7FOl2O2fGKJPsu8WnPwvTELDsVE15goOSnCZOTyMCb5Xmhg1AM1Onr7t8IPtky+ZQH3AoW4jUYHQ6h7L/9EzI=" />
+
+     <!--   <service
+            android:name="com.here.android.mpa.service.MapService"
+            android:exported="true"
+            android:label="HereMapService">
+            <intent-filter>
+
+                &lt;!&ndash; Note, action name should not be changed. &ndash;&gt;
+                <action android:name="com.here.android.mpa.service.MapService.v3" />
+            </intent-filter>
+        </service>
+-->
+
+        <activity
+            android:name=".activity.ForgotPassword"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:windowSoftInputMode="adjustNothing|adjustResize">
+
+            <!--
+                <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".activity.ProfileScreenActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RoadInstalingMapViewPageActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.RoadInstallingmapPageActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+
+         <!--   <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+
+        </activity>
+        <activity
+            android:name=".activity.RoadTermsPageActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GetStartPageActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RoadAboutPageActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.RidesDetailPageActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.RoadStartPageActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.RoadRegisterPageActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.VerificationCodePageActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing|stateHidden" />
+        <activity
+            android:name=".activity.LoginPageActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".activity.RoadSettingsPageActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+        <activity
+            android:name=".activity.ReportProblemPageActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|adjustResize">
+
+
+
+
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.montbleu.fcm.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- OBD-Starts -->
+        <activity
+            android:name="com.montbleu.OBD.activity.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
+
+            <!--
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.montbleu.OBD.activity.ConfigActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montbleu.OBD.activity.TroubleCodesActivity"
+            android:exported="true"
+            android:label="@string/title_activity_trouble_codes"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montbleu.OBD.activity.TripListActivity"
+            android:exported="true"
+            android:label="@string/title_activity_trips_list"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.montbleu.OBD.activity.DeviceListActivity" />
+        <activity
+            android:name="com.montbleu.OBD.activity.MBTActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.montbleu.OBD.activity.DeviceListStartDis"
+            android:exported="true" />
+
+
+
+        <service
+            android:name="com.montbleu.OBD.io.ObdGatewayService"
+            android:exported="true"
+            android:launchMode="singleInstance" />
+        <service
+            android:name="com.montbleu.OBD.io.MockObdGatewayService"
+            android:exported="true"
+            android:launchMode="singleInstance" />
+        <service
+            android:name="com.montbleu.Service.LocationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.montbleu.Service.AlarmReceive"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".PhoneStateReceiver"
+            android:exported="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".OTPBroadCastReceiver"
+            android:exported="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.montbleu.Service.LocationMonitoringService"
+            android:exported="true" />
+        <service
+            android:name="com.montbleu.Service.GPSTracker"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name="com.montbleu.Service.NotificationService" />
+
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" android:visibility="gone"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_top_design"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rudu_bg_v2_no_top_reg">
+
+
+            <LinearLayout
+                android:id="@+id/layout_image_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="175dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/bg_top_design"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/logo_layout"
+                android:layout_width="200dp"
+                android:layout_height="70sp"
+                android:gravity="center"
+                android:src="@drawable/rudu_logo_no_padding"
+                android:layout_marginTop="-30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_image_top" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/logo_layout">
+
+                <TextView
+                    android:id="@+id/text__reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:paddingTop="100dp"
+                    android:text="@string/txt_regis"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="20dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_name_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:endIconDrawable="@drawable/close_image"
+                    app:endIconMode="clear_text"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/text__reg"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_name"
+                        style="@style/TextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/input_border_bottom"
+                        android:drawableStart="@drawable/uname_ic"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/txt_username"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_country_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_name_layout"
+                    tools:ignore="MissingConstraints">
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/et_country"
+                        style="@style/TextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/input_border_bottom"
+                        android:hint="@string/label_hint_country"
+                        android:imeOptions="flagNoExtractUi"
+                        android:textSize="18sp"
+                        app:ms_alignLabels="true"
+                        app:ms_arrowColor="@color/white"
+                        app:ms_baseColor="@color/white"
+                        app:ms_enableErrorLabel="false"
+                        app:ms_errorColor="@color/white"
+                        app:ms_floatingLabelColor="@color/white"
+                        app:ms_floatingLabelText="@string/label_hint_country"
+                        app:ms_highlightColor="@color/white"
+                        app:ms_hint="@string/hint_map_country"
+                        app:ms_hintColor="@color/white"
+                        app:ms_hintTextSize="16sp"
+                        app:ms_multiline="false"
+                        app:ms_thickness="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:id="@+id/view_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_country_layout"></View>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_email_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:endIconDrawable="@drawable/close_image"
+                    app:endIconMode="clear_text"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/view_country"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        style="@style/TextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/input_border_bottom"
+                        android:drawableStart="@drawable/emailicon_ic"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/label_hint_email_opt"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_mobile_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:endIconDrawable="@drawable/close_image"
+                    app:endIconMode="clear_text"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/edit_email_layout"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_mobilenumber"
+                        style="@style/TextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/input_border_bottom"
+                        android:drawableStart="@drawable/mob_ic"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/txt_Mobile_Number"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_verify_sent_to"
+                    style="@style/TextStyle.Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="50dp"
+                    android:text="@string/label_verify_code"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_resend_code"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/edit_password_layout"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_mobile_layout"
+                    tools:ignore="MissingConstraints"
+
+                    />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_password_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/edit_mobile_layout"
+                    app:passwordToggleDrawable="@drawable/icon"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        style="@style/TextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/input_border_bottom"
+                        android:drawableStart="@drawable/lock_ic"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/txt_Password"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textPassword"
+                        android:maxLength="50"
+                        android:textSize="18sp"
+                        app:passwordToggleEnabled="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/checkbox_terms_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp"
+                    android:buttonTint="@color/white"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="I agree to"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_password_layout"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:autoLink="web"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="@string/text_terms"
+                    android:textColor="@color/color_terms"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkbox_terms_condition"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_terms_condition"
+                    app:layout_constraintTop_toTopOf="@+id/checkbox_terms_condition"
+
+                    ></TextView>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRoadSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_round_button"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="@string/txt_create_account"
+                    android:textColor="@color/white"
+                    android:textStyle="normal"
+                    android:visibility="visible"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkbox_terms_condition"></androidx.appcompat.widget.AppCompatButton>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnRoadSubmit">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="@string/text_aleady_account"
+                        android:textColor="#8B8B8B"
+                        android:textSize="15dp"></TextView>
+
+
+                    <TextView
+                        android:id="@+id/txt_LoginNow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="@string/txt_login_now"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="normal"></TextView>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_phonenumber_edit"
+                    style="@style/TextStyle.Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="40dp"
+                    android:text="+91 9487025380"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_verify_sent_to"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/img_edit"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_phonenumber_edit"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_verify_sent_to"></ImageView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

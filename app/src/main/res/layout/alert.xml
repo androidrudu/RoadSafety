@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:padding="30dp"
+    android:paddingBottom="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="100dp"
+        app:cardCornerRadius="10dp"
+        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="30dp"
+            >
+            <TextView
+                android:id="@+id/alert_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="Do you want Logout?"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/hide_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:visibility="invisible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                ></TextView>
+
+
+            <Button
+                android:id="@+id/alert_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintRight_toLeftOf="@+id/hide_logout"
+                app:layout_constraintTop_toBottomOf="@+id/alert_title"
+                android:text="YES"
+                android:textColor="@color/white"
+                android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                ></Button>
+
+            <Button
+                android:id="@+id/alert_no"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                app:layout_constraintLeft_toRightOf="@+id/hide_logout"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/alert_title"
+                android:layout_marginBottom="30dp"
+                android:text="No"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                ></Button>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

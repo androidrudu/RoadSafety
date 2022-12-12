@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item><layer-list>
+        <item android:bottom="1dp"
+            android:left="-2dp"
+            android:right="-2dp"
+            android:top="-2dp"><shape>
+
+            <stroke android:width="1dp" android:color="#696969" />
+
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp" />
+        </shape></item>
+        <item  android:width="20dp"
+            android:height="20dp"
+            android:drawable="@drawable/gender_ic_pn" android:gravity="center_vertical">
+            <!--<bitmap android:gravity="bottom|left" android:src="@drawable/gender_ic_pn" />-->
+        </item>
+    </layer-list></item>
+
+</selector>
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item><layer-list>
+        <item android:bottom="1dp"
+            android:left="-2dp"
+            android:right="-2dp"
+            android:top="-2dp">
+            <shape android:shape="rectangle" >
+                <stroke
+                    android:width="1dp"
+                    android:color="#696969" />
+
+            </shape>
+        </item>
+
+        <item >
+            <bitmap
+                android:width="5dp"
+                android:height="5dp"
+                android:gravity="left|center" android:src="@drawable/gendericon" />
+        </item>
+    </layer-list></item>
+
+</selector>-->

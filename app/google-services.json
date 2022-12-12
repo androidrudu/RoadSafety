@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "524876963155",
+    "project_id": "road-d8a80",
+    "storage_bucket": "road-d8a80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524876963155:android:c34535473f912459add5a6",
+        "android_client_info": {
+          "package_name": "com.montbleu.roadsafety"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524876963155-99h8retg9fjdama4nup8n0i9ert5budh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.montbleu.roadsafety",
+            "certificate_hash": "ec605ced33a0e490bb2ed77cdbb92e2caf55718d"
+          }
+        },
+        {
+          "client_id": "524876963155-i1r29m4kdv0r63bic2sp4l7ohqjcpvlm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK-RTY7evf67uoLa2amQ-xqHwZJXp2kUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524876963155-i1r29m4kdv0r63bic2sp4l7ohqjcpvlm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

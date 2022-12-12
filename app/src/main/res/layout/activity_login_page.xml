@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:nestedScrollingEnabled="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-127dp"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rudu_bg_v2_no_top"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/layout_image_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="175dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_top_design"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/logo_layout"
+                android:layout_width="200dp"
+                android:layout_height="70sp"
+                android:gravity="center"
+                android:src="@drawable/rudu_logo_no_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_image_top" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="130dp"
+                android:orientation="vertical"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                app:layout_constraintTop_toBottomOf="@+id/logo_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="@string/txt_welcome"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+
+                <!--            <com.montbleu.customize.CustomTextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout_mobile_number"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    tools:ignore="MissingConstraints"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeColor="@color/white"
+                    >
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/white"
+                        android:drawableLeft="@drawable/mob_drawable"
+                        android:drawableStart="@drawable/mob_drawable"
+                        android:drawablePadding="10dip"
+                        android:hint="@string/txt_Mobile_Number"
+                        android:inputType="phone"
+                        android:padding="8dp"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="15dp"
+                        android:text=""
+                        android:textColor="#070707"
+                        android:textColorHint="#d6d6d6"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </com.montbleu.customize.CustomTextInputLayout>
+
+
+                <com.montbleu.customize.CustomTextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/white"
+                    app:passwordToggleDrawable="@drawable/pass_visible"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1sp"
+                    app:startIconDrawable="@drawable/lock_icon_v2"
+                    app:startIconTint="@color/white"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        style="@style/TextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/transparent"
+                        android:cursorVisible="true"
+                        android:gravity="center|left|bottom"
+                        android:hint="Password"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:text=""
+                        android:textSize="16sp"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/white"
+                        />
+                </com.montbleu.customize.CustomTextInputLayout>-->
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_name_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:endIconDrawable="@drawable/close_image"
+                    app:endIconMode="clear_text"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/text__reg"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        style="@style/TextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/input_border_bottom"
+                        android:drawableStart="@drawable/uname_ic"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/txt_Mobile_Number"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="50"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/text__reg"
+                    app:passwordToggleDrawable="@drawable/icon"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        style="@style/TextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/input_border_bottom"
+                        android:drawableStart="@drawable/lock_ic"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/txt_Password"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textPassword"
+                        android:maxLength="50"
+                        android:textSize="18sp"
+                        app:passwordToggleEnabled="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="25sp"
+                        android:layout_marginTop="4sp"
+                        android:buttonTint="@color/white"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="@string/txt_remember_me"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="right"
+                        android:text="Forgot Password?"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+
+                        ></TextView>
+
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRoadLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_round_button"
+                    android:clickable="true"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="Login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="normal"></androidx.appcompat.widget.AppCompatButton>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="@string/txt_dont_have_acc"
+                        android:textColor="#8B8B8B"
+                        android:textSize="15dp"></TextView>
+
+
+                    <TextView
+                        android:id="@+id/txt_joinNow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="@string/txt_regist"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="normal"></TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

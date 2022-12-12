@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints"
+    android:background="@color/black"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:layout_margin="0.1sp"
+  >
+
+    <TextView
+        android:id="@+id/obd_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10sp"
+        android:lines="2"
+        android:text="INTAKE_MANIFOLD_ ABSOLUTE_PRESSURE"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        ></TextView>
+
+    <ImageView
+        android:id="@+id/img_obd"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/obd_name"
+        app:layout_constraintTop_toBottomOf="@id/obd_name"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/obd_num"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_obd"
+        app:layout_constraintStart_toEndOf="@+id/img_obd"
+        app:layout_constraintTop_toTopOf="@id/img_obd"
+
+        ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="0.0"
+            android:maxLength="5"
+            android:textSize="20sp"
+            android:id="@+id/obd_value"
+            app:layout_constraintBottom_toBottomOf="@id/img_obd"
+            app:layout_constraintRight_toRightOf="@+id/img_obd"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

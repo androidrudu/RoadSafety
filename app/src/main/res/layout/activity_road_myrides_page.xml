@@ -1,0 +1,2105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.MyRidesPageActivity" android:layout_marginBottom="15dp">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/header" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/abt_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:visibility="visible"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:visibility="gone"
+            >
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="80"
+                android:hint="@string/search_format"
+                android:textSize="17dp"
+                android:padding="10dp"
+                android:gravity="center|left"
+                android:iconifiedByDefault="true"
+                android:paddingLeft="5dp"
+                />
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:padding="6dp"
+                />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/no_ride1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Rides Available"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <!-- <ScrollView
+        android:id="@+id/my_rides_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="@+id/abt_header_layout"
+        app:layout_constraintTop_toBottomOf="@+id/abt_header_layout">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/abt_header_layout"
+            tools:ignore="MissingConstraints">
+
+            <ProgressBar
+                android:id="@+id/idPBLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:indeterminateDrawable="@drawable/progress_bg"
+                android:indeterminateDuration="700"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
+                />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        tools:ignore="MissingConstraints">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            tools:layout_editor_absoluteY="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="65dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/color_grey"
+                                    android:orientation="vertical"
+                                    app:layout_constraintLeft_toLeftOf="parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top|center"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="22sp"
+                                        android:padding="5dp"
+                                        app:layout_constraintBottom_toTopOf="@+id/textview_ride1"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/textview_ride1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/color_grey"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"></TextView>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_grey"
+
+                                        >
+
+                                        <ImageView
+                                            android:id="@+id/date1_img1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:background="@color/color_grey"
+                                            android:src="@drawable/ride_calendar_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_date1"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_date1"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_date1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_date"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/date1_img1"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_grey"
+
+                                        >
+
+                                        <ImageView
+                                            android:id="@+id/min1_img1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_wait_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_min1"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_min1"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_min1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_mins"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/min1_img1"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Mins"
+                                            android:textSize="16sp"
+                                            android:layout_marginRight="4dp"
+                                            android:gravity="start"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/gray_txt"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_min1"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_min1"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_min1"
+                                            android:visibility="invisible"
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="70dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:weightSum="2"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/color_grey"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/time1_img1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_clock_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_time1"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_time1"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_time1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_time"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/time1_img1"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            android:text="@string/am"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:textColor="@color/gray_txt"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_time1"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_time1"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_time1"
+                                            android:visibility="invisible"
+
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/dist1_img1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_distance_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_dist1"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_dist1"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_dist1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_dist"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/dist1_img1"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/km"
+                                            android:layout_marginLeft="5dp"
+                                            android:textColor="@color/gray_txt"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            android:gravity="center"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_dist1"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_dist1"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_dist1"
+                                            android:visibility="invisible"
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/next_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@color/color_grey"
+                            android:gravity="center|center_horizontal"
+                            android:orientation="horizontal"
+                            android:weightSum="100"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="90"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="10"
+                                android:padding="4dp"
+                                android:background="@color/color_grey"
+
+                                />
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="15dp"
+                            android:layerType="software"
+                            android:background="@color/color_grey"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/next_layout" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            tools:layout_editor_absoluteY="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="65dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/color_grey"
+                                    android:orientation="vertical"
+                                    app:layout_constraintLeft_toLeftOf="parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top|center"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="22sp"
+                                        android:padding="5dp"
+                                        app:layout_constraintBottom_toTopOf="@+id/textview_ride2"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/textview_ride2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/color_grey"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"></TextView>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_grey"
+
+                                        >
+
+                                        <ImageView
+                                            android:id="@+id/date1_img2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:background="@color/color_grey"
+                                            android:src="@drawable/ride_calendar_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_date2"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_date2"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_date2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_date"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/date1_img2"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_grey"
+
+                                        >
+
+                                        <ImageView
+                                            android:id="@+id/min1_img2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_wait_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_min2"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_min2"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_min2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_mins"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/min1_img2"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Mins"
+                                            android:textSize="16sp"
+                                            android:layout_marginRight="4dp"
+                                            android:gravity="start"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/gray_txt"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_min2"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_min2"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_min2"
+                                            android:visibility="invisible"
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="70dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:weightSum="2"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/color_grey"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/time1_img2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_clock_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_time2"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_time2"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_time2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_time"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/time1_img2"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            android:text="@string/am"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:textColor="@color/gray_txt"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_time2"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_time2"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_time2"
+                                            android:visibility="invisible"
+
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/dist1_img2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_distance_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_dist2"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_dist2"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_dist2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_dist"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/dist1_img2"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/km"
+                                            android:layout_marginLeft="5dp"
+                                            android:textColor="@color/gray_txt"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            android:gravity="center"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_dist2"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_dist2"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_dist2"
+                                            android:visibility="invisible"
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/next_layout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@color/color_grey"
+                            android:gravity="center|center_horizontal"
+                            android:orientation="horizontal"
+                            android:weightSum="100"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="90"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="10"
+                                android:padding="4dp"
+                                android:background="@color/color_grey"
+
+                                />
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="15dp"
+                            android:layerType="software"
+                            android:background="@color/color_grey"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/next_layout2" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            tools:layout_editor_absoluteY="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="65dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/color_grey"
+                                    android:orientation="vertical"
+                                    app:layout_constraintLeft_toLeftOf="parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top|center"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="22sp"
+                                        android:padding="5dp"
+                                        app:layout_constraintBottom_toTopOf="@+id/textview_ride3"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/textview_ride3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/color_grey"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"></TextView>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_grey"
+
+                                        >
+
+                                        <ImageView
+                                            android:id="@+id/date1_img3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:background="@color/color_grey"
+                                            android:src="@drawable/ride_calendar_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_date3"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_date3"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_date3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_date"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/date1_img3"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_grey"
+
+                                        >
+
+                                        <ImageView
+                                            android:id="@+id/min1_img3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_wait_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_min3"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_min3"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_min3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_mins"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/min1_img3"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Mins"
+                                            android:textSize="16sp"
+                                            android:layout_marginRight="4dp"
+                                            android:gravity="start"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/gray_txt"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_min3"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_min3"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_min3"
+                                            android:visibility="invisible"
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="70dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:weightSum="2"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/color_grey"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/time1_img3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_clock_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_time3"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_time3"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_time3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_time"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/time1_img3"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            android:text="@string/am"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:textColor="@color/gray_txt"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_time3"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_time3"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_time3"
+                                            android:visibility="invisible"
+
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/dist1_img3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_distance_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_dist3"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_dist3"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_dist3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_dist"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/dist1_img3"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/km"
+                                            android:layout_marginLeft="5dp"
+                                            android:textColor="@color/gray_txt"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            android:gravity="center"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_dist3"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_dist3"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_dist3"
+                                            android:visibility="invisible"
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/next_layout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@color/color_grey"
+                            android:gravity="center|center_horizontal"
+                            android:orientation="horizontal"
+                            android:weightSum="100"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="90"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="10"
+                                android:padding="4dp"
+                                android:background="@color/color_grey"
+
+                                />
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="15dp"
+                            android:layerType="software"
+                            android:background="@color/color_grey"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/next_layout3" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            tools:layout_editor_absoluteY="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="65dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/color_grey"
+                                    android:orientation="vertical"
+                                    app:layout_constraintLeft_toLeftOf="parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top|center"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="22sp"
+                                        android:padding="5dp"
+                                        app:layout_constraintBottom_toTopOf="@+id/textview_ride4"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/textview_ride4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/color_grey"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"></TextView>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_grey"
+
+                                        >
+
+                                        <ImageView
+                                            android:id="@+id/date1_img4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:background="@color/color_grey"
+                                            android:src="@drawable/ride_calendar_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_date4"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_date4"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_date4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_date"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/date1_img4"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_grey"
+
+                                        >
+
+                                        <ImageView
+                                            android:id="@+id/min1_img4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_wait_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_min4"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_min4"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_min4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_mins"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/min1_img4"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Mins"
+                                            android:textSize="16sp"
+                                            android:layout_marginRight="4dp"
+                                            android:gravity="start"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/gray_txt"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_min4"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_min4"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_min4"
+                                            android:visibility="invisible"
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="70dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:weightSum="2"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/color_grey"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/time1_img4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_clock_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_time4"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_time4"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_time4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_time"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/time1_img4"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            android:text="@string/am"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:textColor="@color/gray_txt"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_time4"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_time4"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_time4"
+                                            android:visibility="invisible"
+
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/dist1_img4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_distance_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_dist4"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_dist4"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_dist4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_dist"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/dist1_img4"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/km"
+                                            android:layout_marginLeft="5dp"
+                                            android:textColor="@color/gray_txt"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            android:gravity="center"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_dist4"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_dist4"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_dist4"
+                                            android:visibility="invisible"
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/next_layout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@color/color_grey"
+                            android:gravity="center|center_horizontal"
+                            android:orientation="horizontal"
+                            android:weightSum="100"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="90"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="10"
+                                android:padding="4dp"
+                                android:background="@color/color_grey"
+
+                                />
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="15dp"
+                            android:layerType="software"
+                            android:background="@color/color_grey"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/next_layout4" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            tools:layout_editor_absoluteY="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="65dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/color_grey"
+                                    android:orientation="vertical"
+                                    app:layout_constraintLeft_toLeftOf="parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top|center"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="22sp"
+                                        android:padding="5dp"
+                                        app:layout_constraintBottom_toTopOf="@+id/textview_ride5"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/textview_ride5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/color_grey"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"></TextView>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_grey"
+
+                                        >
+
+                                        <ImageView
+                                            android:id="@+id/date1_img5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:background="@color/color_grey"
+                                            android:src="@drawable/ride_calendar_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_date5"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_date5"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_date5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_date"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/date1_img5"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_grey"
+
+                                        >
+
+                                        <ImageView
+                                            android:id="@+id/min1_img5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_wait_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_min5"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_min5"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_min5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_mins"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/min1_img5"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Mins"
+                                            android:textSize="16sp"
+                                            android:layout_marginRight="4dp"
+                                            android:gravity="start"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/gray_txt"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_min5"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_min5"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_min5"
+                                            android:visibility="invisible"
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="70dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:weightSum="2"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/color_grey"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/time1_img5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_clock_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_time5"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_time5"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_time5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_time"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/time1_img5"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            android:text="@string/am"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:textColor="@color/gray_txt"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_time5"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_time5"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_time5"
+                                            android:visibility="invisible"
+
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/dist1_img5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layerType="software"
+                                            android:src="@drawable/ride_distance_red"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_dist5"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_dist5"
+                                            android:visibility="invisible"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/ride1_dist5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/tv_dist"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/dist1_img5"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:visibility="invisible"
+
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/km"
+                                            android:layout_marginLeft="5dp"
+                                            android:textColor="@color/gray_txt"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            android:gravity="center"
+                                            app:layout_constraintBottom_toBottomOf="@+id/ride1_dist5"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ride1_dist5"
+                                            app:layout_constraintTop_toTopOf="@+id/ride1_dist5"
+                                            android:visibility="invisible"
+                                            ></TextView>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/next_layout5"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@color/color_grey"
+                            android:gravity="center|center_horizontal"
+                            android:orientation="horizontal"
+                            android:weightSum="100"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="90"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="10"
+                                android:padding="4dp"
+                                android:background="@color/color_grey"
+
+                                />
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="15dp"
+                            android:layerType="software"
+                            android:background="@color/color_grey"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/next_layout5" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="75dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_round_button"
+                android:text="@string/label_Save"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/my_rides_recycler_View"></Button>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- </ScrollView>-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        android:visibility="gone"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/speedometer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ricks"
+            app:layout_constraintHorizontal_chainStyle="spread">
+
+            <ImageView
+                android:id="@+id/car_speedometer_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layerType="software"
+                android:src="@drawable/car_speedometer"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tv_score"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/car_speedometer_img"
+                app:layout_constraintTop_toBottomOf="@+id/car_speedometer_img"
+                ></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ricks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/speedometer"
+            app:layout_constraintRight_toRightOf="@id/dummy">
+
+            <ImageView
+                android:id="@+id/ricks_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layerType="software"
+                android:src="@drawable/clock_3"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="4dp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tv_ride"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/ricks_img"
+                app:layout_constraintRight_toRightOf="@+id/ricks_img"
+                app:layout_constraintTop_toBottomOf="@+id/ricks_img"
+                ></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dummy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ricks"
+            app:layout_constraintRight_toLeftOf="@+id/dashboard">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layerType="software"
+                android:src="@drawable/clock_3"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="4dp"
+                android:visibility="invisible"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dashboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/dummy"
+            app:layout_constraintRight_toLeftOf="@+id/more">
+
+            <ImageView
+                android:id="@+id/dashboard_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="4dp"
+                android:layerType="software"
+                android:src="@drawable/clock_3"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tv_dashboard"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/dashboard_img"
+                app:layout_constraintRight_toRightOf="@+id/dashboard_img"
+                app:layout_constraintTop_toBottomOf="@+id/dashboard_img"
+                ></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/dashboard"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/more_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layerType="software"
+                android:src="@drawable/clock_3"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="4dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tv_more"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/more_img"
+                app:layout_constraintRight_toRightOf="@+id/more_img"
+                app:layout_constraintTop_toBottomOf="@+id/more_img"
+                ></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chauffer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/round_white"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layerType="software"
+            android:src="@drawable/chauffer"
+
+            tools:ignore="MissingConstraints"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_rides_recycler_View"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoe_ui"
+        android:text="@string/label_my_rides"
+        android:textColor="@color/color_title"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

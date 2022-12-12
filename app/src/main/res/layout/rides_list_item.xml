@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="3"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvRides"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Rides"
+        android:textSize="13dp"
+        android:textColor="#20130B"
+        android:fontFamily="@font/segoe_ui"/>
+    <TextView
+        android:id="@+id/tvRiskAlert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Risk Alerts"
+        android:textSize="13dp"
+        android:textColor="#20130B"
+        android:fontFamily="@font/segoe_ui"/>
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Scores"
+        android:textSize="13dp"
+        android:textColor="#20130B"
+        android:fontFamily="@font/segoe_ui"/>
+</LinearLayout>

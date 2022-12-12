@@ -1,0 +1,6 @@
+include ':gaugelibrary'
+include ':library'
+include ':app'
+include ':library_thermo'
+rootProject.name = "RoadSafety"
+include ':library_thermo'

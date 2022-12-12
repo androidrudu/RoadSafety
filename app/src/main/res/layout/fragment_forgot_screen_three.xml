@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rudu_bg_v2"
+    tools:context=".activity.LoginPageActivity">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:id="@+id/layout_image_top"
+            tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/logo_layout"
+                android:layout_width="200dp"
+                android:layout_height="90sp"
+                android:gravity="center"
+                android:src="@drawable/rudu_logo_no_padding"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|fill_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_verify_sent_to"
+                        style="@style/TextStyle.Title.Sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:text="@string/txt_new_passw"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dp"
+                        android:textStyle="normal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        tools:ignore="MissingConstraints"
+                        android:fontFamily="@font/segoe_ui"
+
+                        />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_NewPass"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_verify_sent_to"
+                        tools:ignore="MissingConstraints"
+                        android:layout_marginTop="40dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="1sp"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                        app:passwordToggleDrawable="@drawable/pass_ic"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/white"
+                        app:hintTextColor="@color/white"
+                        app:boxStrokeWidthFocused="1dp"
+                        app:boxBackgroundMode="filled"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNewPass"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:cursorVisible="true"
+                            android:hint="@string/txt_forgot_new_password_title"
+                            android:maxLength="20"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="textWebPassword"
+                            android:background="@android:color/transparent"
+                            android:gravity="center|left|bottom"
+                            android:drawableStart="@drawable/lock_ic"
+                            android:drawablePadding="8dp"
+                            android:text=""
+                            android:textSize="16sp"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/white"
+                            android:fontFamily="@font/segoe_ui"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_ConfirmPass"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/white"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/layout_NewPass"
+                        tools:ignore="MissingConstraints"
+                        android:layout_marginTop="20dp"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="1sp"
+                        app:passwordToggleDrawable="@drawable/pass_ic"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/white"
+                        app:hintTextColor="@color/white"
+                        app:boxStrokeWidthFocused="1dp"
+                        app:boxBackgroundMode="filled"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etConfpass"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:cursorVisible="true"
+                            android:hint="@string/txt_forgot_con_password_title"
+                            android:maxLength="20"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="textWebPassword"
+                            android:background="@android:color/transparent"
+                            android:gravity="center|left|bottom"
+                            android:drawableStart="@drawable/lock_ic"
+                            android:drawablePadding="8dp"
+                            android:text=""
+                            android:textSize="16sp"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/white"
+                            android:fontFamily="@font/segoe_ui"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSendOTP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/bg_round_button"
+                        android:text="@string/btn_setPassword"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/layout_ConfirmPass"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textAllCaps="false"
+                        android:textSize="20sp"
+                        ></androidx.appcompat.widget.AppCompatButton>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <TableLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="3dp"
+        >
+        <TableRow>
+            <ImageView
+                android:id="@+id/category_icon"
+                android:layout_width="0sp"
+                android:layout_height="40sp"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="12sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <ImageView
+                android:id="@+id/alert_icon"
+                android:layout_width="0dp"
+                android:layout_height="40sp"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="6dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/alert_speed_limit"
+                app:layout_constraintStart_toEndOf="@+id/alert_time"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+
+            <TextView
+                android:id="@+id/time_value"
+                android:layout_width="0dp"
+                android:layout_height="40sp"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/alert_speed"
+                app:layout_constraintStart_toEndOf="@+id/alert_dist"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/dist_km_val"
+                android:layout_width="0dp"
+                android:layout_height="40sp"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/zip_val"
+                app:layout_constraintStart_toEndOf="@+id/alert_speed_limit"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/sl_ps_val"
+                android:layout_width="0dp"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView7"
+                app:layout_constraintStart_toEndOf="@+id/txt_speed_limit"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+
+            <TextView
+                android:id="@+id/speed_val"
+                android:layout_width="0dp"
+                android:layout_height="40sp"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/zip_val"
+                android:layout_width="0dp"
+                android:layout_height="40sp"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/no_record"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:text="No Risk Alert"
+        android:visibility="gone"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

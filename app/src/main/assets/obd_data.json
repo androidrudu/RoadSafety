@@ -1,0 +1,185 @@
+{
+  "OBD_Data":
+  [
+    {
+      "id":"Fuel_System_Status_value",
+      "value":"Fuel System Status value"
+    },
+    {
+      "id":"MAF_air_flow_rate",
+      "value":"MAF air flow rate"
+    },
+    {
+      "id":"V_FUEL_LEVEL",
+      "value":"V FUEL LEVEL"
+    },
+    {
+      "id":"ODOMETER",
+      "value":"ODOMETER"
+    },
+    {
+      "id":"Distance_traveled_since_codes_cleared_value",
+      "value":"Distance traveled since codes cleared value"
+    },
+    {
+      "id":"V_OIL_TEMP",
+      "value":"V OIL TEMP"
+    },
+    {
+      "id":"Oxygen_Sensor_1_Air_Fuel_Equivalence_Ratio_value",
+      "value":"Oxygen Sensor 1 Air Fuel Equivalence Ratio value"
+    },
+    {
+      "id":"Absolute_load_value_value",
+      "value":"Absolute load value value"
+    },
+    {
+      "id":"Relative_throttle_position_value",
+      "value":"Relative throttle position value"
+    },
+    {
+      "id":"Absolute_throttle_position_B_value",
+      "value":"Absolute throttle position B value"
+    },
+    {
+      "id":"Accelerator_pedal_position_D_value",
+      "value":"Accelerator pedal position D value"
+    },{
+    "id":"V_FUEL_RATE",
+    "value":"V FUEL RATE"
+  },
+    {
+      "id":"V_AIR_TEMP",
+      "value":"V AIR TEMP"
+    },
+    {
+      "id":"V_Engine_Load",
+      "value":"V Engine Load"
+    },
+    {
+      "id":"V_COOLANT_TEMP",
+      "value":"V COOLANT TEMP"
+    },
+    {
+      "id":"V_S_Fuel_trim_Bank_1",
+      "value":"V S Fuel trim Bank 1"
+    },
+    {
+      "id":"V_Intake_Manifold_Absolute_Pressure",
+      "value":"V Intake Manifold Absolute Pressure"
+    },
+    {
+      "id":"V_RPM",
+      "value":"V RPM"
+    },
+    {
+      "id":"V_SPEED",
+      "value":"V SPEED"
+    },
+    {
+      "id":"V_Timing_Advance",
+      "value":"V Timing Advance"
+    },
+    {
+      "id":"V_AIR_FUEL_RATIO",
+      "value":"V AIR FUEL RATIO"
+    },
+    {
+      "id":"V_THROTTLE_POS",
+      "value":"V THROTTLE POS"
+    },{
+    "id":"V_Run_Time_Since_Engine_Start",
+    "value":"V Run Time Since Engine Start"
+  },
+    {
+      "id":"V_BATT_VOLTAGE",
+      "value":"V  BATT VOLTAGE"
+    },
+    {
+      "id":"V_Distance_MIL",
+      "value":"V Distance MIL"
+    },
+    {
+      "id":"V_BAROMETRIC_PRESSURE",
+      "value":"V BAROMETRIC PRESSURE"
+    },
+    {
+      "id":"Commanded_evaporative_purge_value",
+      "value":"Commanded evaporative purge value"
+    },
+    {
+      "id":"Warm_ups_since_codes_cleared_value",
+      "value":"Warm ups since codes cleared value"
+    },
+    {
+      "id":"Accelerator_pedal_position_E_value",
+      "value":"Accelerator pedal position E value"
+    },
+    {
+      "id":"Commanded_throttle_actuator_value",
+      "value":"Commanded throttle actuator value"
+    },
+    {
+      "id":"V_L_Fuel_trim_Bank_1",
+      "value":"V L Fuel trim Bank 1"
+    },
+    {
+      "id":"V_S_Fuel_trim_Bank_2",
+      "value":"V S Fuel trim Bank 2"
+    },
+    {
+      "id":"V_L_Fuel_trim_Bank_2",
+      "value":"V L Fuel trim Bank 2"
+    },{
+    "id":"V_FUEL_PRESSURE",
+    "value":"V FUEL PRESSURE"
+  },
+    {
+      "id":"V_INTAKE_TEMP",
+      "value":"V INTAKE TEMP"
+    },
+    {
+      "id":"V_FUEL_RAIL_PRESSURE",
+      "value":"V FUEL RAIL PRESSURE"
+    },
+    {
+      "id":"Oxygen_Sensor_1_Air_Fuel_Ratio",
+      "value":"Oxygen Sensor 1 Air Fuel Ratio"
+    },
+    {
+      "id":"Oxygen_Sensor_1_voltage",
+      "value":"Oxygen Sensor 1 voltage"
+    },
+    {
+      "id":"Cylinder_Fuel_Rate_value",
+      "value":"Cylinder Fuel Rate value"
+    },
+    {
+      "id":"Engine_Friction_Percent_Torque_value",
+      "value":"Engine Friction Percent Torque value"
+    },
+    {
+      "id":"Hybrid_battery_pack_remaining_life_value",
+      "value":"Hybrid battery pack remaining life value"
+    },
+    {
+      "id":"Transmission_Actual_Gear_value",
+      "value":"Transmission Actual  Gear value"
+    },
+    {
+      "id":"Engine_Friction_Percent_Torque_value",
+      "value":"Engine Friction Percent Torque  value"
+    },
+    {
+      "id":"Commanded_EGR_value",
+      "value":"Commanded EGR value"
+    },{
+    "id":"EGR_Error_value",
+    "value":"EGR Error value"
+  },
+    {
+      "id":"Fuel_Rail_Gauge_Pressure_value",
+      "value":"Fuel Rail  Gauge Pressure value"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/shape"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:id="@+id/scoreLayout"
+        android:layout_margin="10dp"
+        >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/textview_ride"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="RIDE 650"
+                android:fontFamily="@font/segoe_ui"
+                android:textColor="@color/black"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/ride1_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/sandclock_ic"
+                android:drawablePadding="10dp"
+                android:drawableTint="#555555"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="left"
+                android:text="60:00 Mins"
+                android:textSize="14dp"
+                android:paddingBottom="10dp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/ride1_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/calen_ic"
+                android:drawablePadding="5dp"
+                android:drawableTint="#555555"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/segoe_ui"
+                android:text="17 Oct 2022 | 06:00 AM - 07:00 AM"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/ride1_dist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/route_ic"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="left"
+                android:text="14.5 KM"
+                android:textSize="14dp" />
+
+        </TableRow>
+
+        <TableRow>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="10dp">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="1">
+
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                app:srcCompat="@drawable/ride_loc_ic" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center_vertical"
+                android:padding="0dp" >
+
+
+                <TextView
+                    android:id="@+id/tvFrom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvTo"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="top"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:text="Krishna Colony, Coimbatore, Tamil Nadu.."
+                    android:textColor="@color/dark_gray"
+                    android:textSize="13dp"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/tvTo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:maxLines="1"
+                    android:singleLine="false"
+                    android:text="Gandhipuram Central, Coimbatore, Tamil.."
+                    android:textColor="@color/dark_gray"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="-10dp"
+                android:layout_weight="0.2"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="5dp"
+                android:weightSum="2" >
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ProgressBar
+                        android:id="@+id/pb"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/circle_shapes"
+                        android:indeterminateOnly="false"
+                        android:max="100"
+                        android:progress="65"
+                        android:progressDrawable="@drawable/circularprogressbar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/ride_score_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textColor="#001A46"
+                        android:textSize="18dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pb"
+                        app:layout_constraintEnd_toEndOf="@+id/pb"
+                        app:layout_constraintStart_toStartOf="@+id/pb"
+                        app:layout_constraintTop_toTopOf="@+id/pb"
+                        tools:text="50%" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        </TableRow>
+
+    </TableLayout>
+    </LinearLayout>
+     <!-- <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="#CACACA"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"/>-->
+
+</LinearLayout>

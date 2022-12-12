@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/header" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_image_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            tools:ignore="MissingConstraints">
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/edittext_largertext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="196dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <TextView
+                android:id="@+id/profile_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/segoe_ui"
+                android:text="@string/title_my_profile"
+                android:textColor="@color/color_title"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fillViewport="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_title">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_title"
+                        tools:layout_editor_absoluteX="2dp">
+
+                        <!-- <ImageView
+                     android:id="@+id/ivfoto"
+                     android:layout_width="60dp"
+                     android:layout_height="60dp"
+                     android:padding="10dp"
+                     app:srcCompat="@drawable/foto"
+                     />-->
+                        <RelativeLayout
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@android:color/transparent">
+
+                            <ImageView
+                                android:id="@+id/img"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/foto" />
+
+                            <ImageView
+                                android:id="@+id/add_remove_icon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/camera_ic" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hi !"
+                                android:visibility="gone"
+                                android:textColor="#001A46" />
+
+                            <TextView
+                                android:id="@+id/tvName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="SELVA R"
+                                android:textColor="#001A46" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ivedit"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginRight="40dp"
+                            android:padding="10dp"
+                            app:srcCompat="@drawable/edit_icon" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/etfullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:drawableLeft="@drawable/profi_ic"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/color_title"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:fontFamily="@font/segoe_ui"
+                        android:hint="Full Name"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textSize="14dp" />
+
+
+                  <!--  <Spinner
+                        android:id="@+id/spinGender"
+                        style="@style/spinner_style"
+                        android:fontFamily="@font/segoe_ui"
+                        android:minHeight="48dp" />-->
+
+
+
+                    <Spinner
+                        android:id="@+id/spinGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:minHeight="48dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/left_spin_gend_draw"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etfullname"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:paddingLeft="10dp"
+                        android:textSize="14dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:spinnerMode="dropdown"
+                        android:dropDownVerticalOffset="50dp"
+                        style="@style/spinner_style"
+                        android:fontFamily="@font/segoe_ui" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        tools:ignore="MissingConstraints"
+                        android:visibility="visible"
+                        android:layout_marginTop="-12dp"
+                        app:layout_constraintTop_toBottomOf="@+id/spin_layout"
+                        android:background="@color/color_title"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginRight="13dp"
+                        android:id="@+id/feed_seperate"
+                        />
+
+                    <!-- <EditText
+                         android:id="@+id/etfullname"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginRight="10dp"
+                         android:drawableLeft="@drawable/profi_ic"
+                         android:drawablePadding="10dp"
+                         android:ems="10"
+                         android:fontFamily="@font/segoe_ui"
+                         android:hint="Full Name"
+                         android:inputType="textPersonName"
+                         android:minHeight="48dp"
+                         android:textSize="14dp"
+                         android:textColor="@color/color_title"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         app:layout_constraintStart_toStartOf="parent"
+                         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                         android:enabled="false"
+                         />
+-->
+
+                    <EditText
+                        android:id="@+id/etGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="32dp"
+                        android:drawableLeft="@drawable/profi_ic"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:fontFamily="@font/segoe_ui"
+                        android:hint="Gender"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textColor="@color/color_title"
+                        android:textSize="14dp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etfullname" />
+
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:drawableLeft="@drawable/envelope_ic"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/color_title"
+                        android:ems="10"
+                        android:fontFamily="@font/segoe_ui"
+                        android:hint="Email"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textSize="14dp" />
+
+
+                    <!--     <EditText
+                             android:id="@+id/etEmail"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_margin="10dp"
+                             android:layout_marginTop="32dp"
+                             android:drawableLeft="@drawable/envelope_ic"
+                             android:drawablePadding="10dp"
+                             android:ems="10"
+                             android:fontFamily="@font/segoe_ui"
+                             android:hint="Email"
+                             android:inputType="textPersonName"
+                             android:minHeight="48dp"
+                             android:textSize="14dp"
+                             android:enabled="false"
+                             app:layout_constraintEnd_toEndOf="parent"
+                             app:layout_constraintStart_toStartOf="parent"
+                             app:layout_constraintTop_toBottomOf="@+id/etGender"
+                             android:textColor="@color/color_title"
+
+                             />-->
+
+                    <EditText
+                        android:id="@+id/etMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="32dp"
+                        android:drawableLeft="@drawable/mobile_ic"
+                        android:drawablePadding="10dp"
+                        android:paddingLeft="8dp"
+                        android:ems="10"
+                        android:fontFamily="@font/segoe_ui"
+                        android:hint="Mobile Number"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textSize="14dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+
+                    <EditText
+                        android:id="@+id/etDOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="32dp"
+                        android:drawableLeft="@drawable/dob_ic"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:fontFamily="@font/segoe_ui"
+                        android:hint="Date of Birth"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:onClick="renderDatePicker"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/etLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/logouticon_ic"
+                        android:drawablePadding="10dp"
+                        android:paddingLeft="5dp"
+                        android:ems="10"
+                        android:fontFamily="@font/segoe_ui"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:text="Log Out"
+                        android:textSize="14dp"
+                        android:focusable="false"
+                        android:editable="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etDOB" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnUpdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="50sp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/bg_round_button"
+                        android:clickable="true"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etLogout"></androidx.appcompat.widget.AppCompatButton>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

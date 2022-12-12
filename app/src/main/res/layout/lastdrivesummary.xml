@@ -1,0 +1,2212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_grey_color"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+            <include
+                android:id="@+id/include6"
+                layout="@layout/header" />
+            <!--<LinearLayout
+                android:id="@+id/linearLayout_ellipse"
+                android:layout_width="215dp"
+                android:layout_height="178dp"
+                android:background="@drawable/bg_top_design"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="55dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/rudu_logo_no_padding"
+                android:layout_marginRight="30dp"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <RelativeLayout
+                    android:id="@+id/shape_layout"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/rounded_profile_textview"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/myCardView"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        app:cardCornerRadius="50dp">
+
+                        <ImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/tvHi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hi!"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SELVA R"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/whitebg"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include6">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Last Drive Summary"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#001A46"
+                    android:fontFamily="@font/segoe_ui"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/circledarkgreen">
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/totalrides" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="Drive Score"
+                            android:textSize="11dp"
+                            android:layout_weight="0.1"
+                            android:textColor="#001A46"
+                            android:fontFamily="@font/segoe_ui"/>
+
+                        <TextView
+                            android:id="@+id/tvTotalRides"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="0"
+                            android:layout_weight="0.1"
+                            android:textSize="11dp"
+                            android:textColor="#001A46"
+                            android:fontFamily="@font/segoe_ui"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:background="@drawable/circleorange">
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/drivenkm" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="Ride"
+                            android:textSize="11dp"
+                            android:textColor="#001A46"
+                            android:fontFamily="@font/segoe_ui"/>
+
+                        <TextView
+                            android:id="@+id/tvDrivenKms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="0"
+                            android:textSize="11dp"
+                            android:textColor="#001A46"
+                            android:fontFamily="@font/segoe_ui"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:background="@drawable/circledarkblue">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/rank_ic" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:gravity="center"
+                            android:text="Rank"
+                            android:textSize="11dp"
+                            android:textColor="#001A46"
+                            android:fontFamily="@font/segoe_ui"/>
+
+                        <TextView
+                            android:id="@+id/tvDrivenHours"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="0"
+                            android:textColor="#001A46"
+                            android:textSize="11sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:background="@drawable/circlelight">
+                            <ImageView
+                                android:id="@+id/imageView9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/latestride" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="Ride Time"
+                            android:textSize="11dp"
+                            android:textColor="#001A46"
+                            android:fontFamily="@font/segoe_ui"/>
+
+                        <TextView
+                            android:id="@+id/tvLatestRide"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="16 oct 2022, 17:15"
+                            android:textSize="11dp"
+                            android:textColor="#001A46"
+                            android:fontFamily="@font/segoe_ui"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/rain_new"
+                    android:paddingRight="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="Heavy rain forecasted in your area, stay safe!"
+                    android:textColor="#20130B"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/whitebg"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Driving Score - "
+                        android:textColor="#001A46"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/drive_score"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/segoe_ui_bold"
+                        />
+                </LinearLayout>
+                <com.github.anastr.speedviewlib.SpeedView
+                    android:id="@+id/speedometer_detail"
+                    android:layout_width="200dp"
+                    android:layout_height="270dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sv_centerCircleRadius="0dp"
+                    app:sv_cutPadding="40dp"
+                    app:sv_speedTextFormat="INTEGER"
+                    app:sv_textSize="16sp"
+                    app:sv_withTremble="false"
+                    android:layout_gravity="center"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="5dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:padding="3dp"
+                        android:gravity="center"
+                        >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="115dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/antici_gauge_text_val"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentTop="true"
+                                android:gravity="center"
+                                android:text="0"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:textSize="20sp"
+                                android:textColor="@color/black"
+                                />
+                            <ProgressBar
+                                android:id="@+id/anticipate_gauge"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/circle_shapes"
+                                android:indeterminateOnly="false"
+                                android:max="100"
+                                android:progressDrawable="@drawable/circularprogressbar"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <!-- <pl.pawelkleczkowski.customgauge.CustomGauge
+                                 android:id="@+id/anticipate_gauge"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 app:gaugeDividerDrawFirst="false"
+                                 app:gaugeDividerDrawLast="true"
+                                 app:gaugeDividerSize="4"
+                                 app:gaugeDividerStep="10"
+                                 app:gaugeEndValue="100"
+                                 app:gaugePointEndColor="@color/bg_antici_guage"
+                                 app:gaugePointStartColor="@color/bg_antici_guage"
+                                 app:gaugeStartAngle="180"
+                                 app:gaugeStartValue="0"
+                                 app:gaugeStrokeCap="SQUARE"
+                                 app:gaugeStrokeColor="@color/bg_grey_color"
+                                 app:gaugeStrokeWidth="20dp"
+
+                                 app:gaugeSweepAngle="360"/>-->
+
+
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_anticipate"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/segoe_ui_bold"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:padding="3dp"
+                        android:gravity="center"
+
+                        >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="115dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/self_conf_text_val"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentTop="true"
+                                android:gravity="center"
+                                android:text="0"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:textSize="20sp"
+                                android:textColor="@color/black"
+                                />
+
+                            <ProgressBar
+                                android:id="@+id/self_conf_gauge"
+                                android:layout_width="102dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/circle_shapes"
+                                android:indeterminateOnly="false"
+                                android:max="100"
+                                android:progressDrawable="@drawable/circularprogressbar"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <!-- <pl.pawelkleczkowski.customgauge.CustomGauge
+                                 android:id="@+id/self_conf_gauge"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 app:gaugeDividerDrawFirst="false"
+                                 app:gaugeDividerDrawLast="true"
+                                 app:gaugeDividerSize="4"
+                                 app:gaugeDividerStep="10"
+                                 app:gaugeEndValue="100"
+                                 app:gaugePointEndColor="@color/bg_self_conf"
+                                 app:gaugePointStartColor="@color/bg_self_conf"
+                                 app:gaugeStartAngle="180"
+                                 app:gaugeStartValue="0"
+                                 app:gaugeStrokeCap="SQUARE"
+                                 app:gaugeStrokeColor="@color/bg_grey_color"
+                                 app:gaugeStrokeWidth="20dp"
+                                 app:gaugeSweepAngle="360" />-->
+
+
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_self_conf"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/segoe_ui_bold"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:padding="3dp"
+                        android:gravity="center"
+
+                        >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="115dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/drive_skill_text_val"
+                                android:text="0"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentTop="true"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:textSize="20sp"
+
+                                />
+                            <!-- <pl.pawelkleczkowski.customgauge.CustomGauge
+                                 android:id="@+id/drive_skill_gauge"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 app:gaugeDividerDrawFirst="false"
+                                 app:gaugeDividerDrawLast="true"
+                                 app:gaugeDividerSize="4"
+                                 app:gaugeDividerStep="10"
+                                 app:gaugeEndValue="100"
+                                 app:gaugePointEndColor="@color/bg_drive_skil"
+                                 app:gaugePointStartColor="@color/bg_drive_skil"
+                                 app:gaugeStartAngle="180"
+                                 app:gaugeStartValue="0"
+                                 app:gaugeStrokeCap="SQUARE"
+                                 app:gaugeStrokeColor="@color/bg_grey_color"
+                                 app:gaugeStrokeWidth="20dp"
+                                 app:gaugeSweepAngle="360" />-->
+
+                            <ProgressBar
+                                android:id="@+id/drive_skill_gauge"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/circle_shapes"
+                                android:indeterminateOnly="false"
+                                android:max="100"
+                                android:progressDrawable="@drawable/circularprogressbar"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_drive_skill"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/segoe_ui_bold"
+                            android:textColor="@color/black"
+                            />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:background="#ABABAB" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/time_ic"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10.08 PM"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/segoe_ui"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="5sp"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/km_ic"
+                        android:paddingRight="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvkm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07:15 KM"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/segoe_ui"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="5sp"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/mins_ic"
+                        android:paddingRight="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvwait"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27:58 Mins"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/segoe_ui"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/whitebg"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:id="@+id/trip_profile_layout"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="Trip Profile"
+                    android:textColor="#001A46"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Chart Data Available"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/segoe_ui"
+                    app:layout_constraintBottom_toBottomOf="@+id/piechart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+
+                    ></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/piechart"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2"
+                        ></com.github.mikephil.charting.charts.PieChart>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="left"
+                            android:layout_weight="1.8"
+                            android:weightSum="3"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="@+id/piechart"
+                            app:layout_constraintStart_toStartOf="@+id/piechart"
+                            app:layout_constraintTop_toBottomOf="@id/piechart">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:orientation="horizontal"
+                                >
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_gravity="bottom"
+                                    app:cardBackgroundColor="#FA7D7C"
+                                    app:cardCornerRadius="5dp"></androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:text="Urban"
+                                    android:textColor="@color/black"></TextView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                >
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#9A79C4"
+                                    app:cardCornerRadius="5dp"></androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:text="Rural"
+                                    android:textColor="@color/black"></TextView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                >
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_gravity="top"
+                                    app:cardBackgroundColor="#78CAE3"
+                                    app:cardCornerRadius="5dp"></androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:text="Highway"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:layout_marginLeft="10dp"
+                                    android:textColor="@color/black"></TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linearLayout7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:weightSum="1"
+                            app:layout_constraintEnd_toEndOf="@+id/piechart"
+                            app:layout_constraintStart_toStartOf="@+id/piechart"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:weightSum="1"
+                                >
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.5"
+                                    android:text="Day : "
+                                    android:gravity="center"
+                                    android:textSize="11sp"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:textColor="@color/black"
+                                    android:layout_height="match_parent"
+                                    ></TextView>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:id="@+id/day_percent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:layout_height="match_parent"
+                                    ></TextView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                >
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.5"
+                                    android:text="Night :"
+                                    android:gravity="center"
+                                    android:textSize="11sp"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:textColor="@color/black"
+                                    android:layout_height="match_parent"
+                                    ></TextView>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:id="@+id/night_percent"
+                                    android:layout_height="match_parent"
+                                    ></TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/whitebg"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trip_profile_layout">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:layout_marginTop="10dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layerType="software"
+                            android:src="@drawable/dash_line"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/corner_radius_textview"
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:text="@string/title_trip_risk_chart"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        ></TextView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layerType="software"
+                            android:src="@drawable/dash_line"
+
+                            />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <com.montbleu.customize.VerticalTextView
+                        android:id="@+id/risk-arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Risk"
+                        android:textSize="13sp"
+                        android:gravity="bottom"
+                        android:fontFamily="@font/segoe_ui"
+                        app:layout_constraintBottom_toTopOf="@+id/distance-arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/graph" />
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/graph"
+                        android:layout_width="0dp"
+                        android:layout_height="302dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintBottom_toTopOf="@+id/distance-arrow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/risk-arrow"
+                        app:layout_constraintTop_toTopOf="parent"></com.github.mikephil.charting.charts.LineChart>
+                    <TextView
+                        android:id="@+id/distance-arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distance (Km)"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/graph" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/distance-arrow">
+
+                        <View
+                            android:id="@+id/color_view1"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@color/blue_grp" />
+
+                        <TextView
+                            android:id="@+id/tv_label1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@color/black"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text="Risk by KM"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/segoe_ui"
+                            app:layout_constraintBottom_toBottomOf="@+id/color_view1"
+                            app:layout_constraintEnd_toStartOf="@+id/color_view2"
+                            app:layout_constraintLeft_toRightOf="@+id/color_view1"
+                            app:layout_constraintTop_toBottomOf="@+id/graph"
+                            app:layout_constraintTop_toTopOf="@+id/color_view1" />
+
+                        <View
+                            android:id="@+id/color_view2"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@color/ride_red"
+                            app:layout_constraintRight_toLeftOf="@+id/tv_label2"
+                            app:layout_constraintTop_toBottomOf="@+id/distance-arrow" />
+
+                        <TextView
+                            android:id="@+id/tv_label2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:drawableLeft="@color/black"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text="Red Alert Threshold"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/segoe_ui"
+                            app:layout_constraintBottom_toBottomOf="@+id/color_view2"
+                            app:layout_constraintEnd_toStartOf="@+id/color_view3"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_label1"
+                            app:layout_constraintTop_toBottomOf="@+id/graph"
+                            app:layout_constraintTop_toTopOf="@+id/color_view2" />
+
+                        <View
+                            android:id="@+id/color_view3"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@color/ride_amber"
+                            app:layout_constraintRight_toLeftOf="@+id/tv_label3"
+                            app:layout_constraintTop_toBottomOf="@+id/distance-arrow" />
+
+                        <TextView
+                            android:id="@+id/tv_label3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@color/black"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Orange Alert Threshold"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/color_view3"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_label2"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/graph"
+                            app:layout_constraintTop_toTopOf="@+id/color_view3" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/risk_style_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/whitebg"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:layout_marginTop="10dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layerType="software"
+                            android:src="@drawable/dash_line"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/corner_radius_textview"
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:text="@string/title_trip_risk_style_chart"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/segoe_ui"
+                        ></TextView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layerType="software"
+                            android:src="@drawable/dash_line"
+
+                            />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+                    <com.montbleu.customize.VerticalTextView
+                        android:id="@+id/risk_style_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Risk Style"
+                        android:textSize="13sp"
+                        android:gravity="bottom"
+                        android:fontFamily="@font/segoe_ui"
+                        android:src="@drawable/risk_style_arrow_new"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView19"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/risk_graph" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/risk_graph"
+                        android:layout_width="0dp"
+                        android:layout_height="302dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/risk_style_arrow"
+                        app:layout_constraintTop_toTopOf="parent"></com.github.mikephil.charting.charts.LineChart>
+
+                    <TextView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distance (Km)"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/segoe_ui"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/risk_graph" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView19">
+                        <TableRow>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:text="0"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:text="1"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:text="2"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:text="3"></TextView>
+
+                        </TableRow>
+                        <TableRow>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/start_unknown_black"></ImageView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/anticipative"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/expert"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/risky"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Unknown"></TextView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Anticipative"></TextView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Expert"></TextView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Risky"></TextView>
+                        </TableRow>
+                    </TableLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/driving_style_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/whitebg"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/risk_style_layout">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:layout_marginTop="10dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layerType="software"
+                            android:src="@drawable/dash_line"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/corner_radius_textview"
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:text="@string/title_trip_driver_state_chart"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+
+
+                        ></TextView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layerType="software"
+                            android:src="@drawable/dash_line"
+
+                            />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+                    <com.montbleu.customize.VerticalTextView
+                        android:id="@+id/driver_state_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Driver State"
+                        android:textSize="13sp"
+                        android:gravity="bottom"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView20"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/driver_state_graph" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/driver_state_graph"
+                        android:layout_width="0dp"
+                        android:layout_height="302dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/driver_state_arrow"
+                        app:layout_constraintTop_toTopOf="parent"></com.github.mikephil.charting.charts.LineChart>
+                    <TextView
+                        android:id="@+id/imageView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distance (Km)"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/driver_state_graph" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView20">
+                        <TableRow>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="0"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="1"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:gravity="center"
+                                android:text="2"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="3"></TextView>
+
+                        </TableRow>
+                        <TableRow>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/start_unknown_black"></ImageView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/normal"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/tired"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/angry"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Unknown"></TextView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Normal"></TextView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Tired"></TextView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Angry"></TextView>
+                        </TableRow>
+                    </TableLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/driving_state_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/whitebg"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/driving_style_layout">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:layout_marginTop="10dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layerType="software"
+                            android:src="@drawable/dash_line"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/corner_radius_textview"
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:text="@string/title_trip_driving_style_chart"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+
+
+                        ></TextView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layerType="software"
+                            android:src="@drawable/dash_line"
+
+                            />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+                    <com.montbleu.customize.VerticalTextView
+                        android:id="@+id/driver_style_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Driving Style"
+                        android:textSize="13sp"
+                        android:gravity="bottom"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView21"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/driving_style_graph" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/driving_style_graph"
+                        android:layout_width="0dp"
+                        android:layout_height="302dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/driver_style_arrow"
+                        app:layout_constraintTop_toTopOf="parent"></com.github.mikephil.charting.charts.LineChart>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distance (Km)"
+                        android:textSize="13sp"
+                        android:id="@+id/imageView21"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/driving_style_graph" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView21">
+                        <TableRow>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="0"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="1"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="2"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="3"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="4"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:gravity="center"
+                                android:text="5"></TextView>
+
+                        </TableRow>
+                        <TableRow>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/tired"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/sportive"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/agressive"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/chaotic"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/normal"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_column="1"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/eco"
+                                    android:padding="40dp"></ImageView>
+                            </LinearLayout>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Unknown"></TextView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Sportive"></TextView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Agressive"></TextView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Chaotic"></TextView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Normal"></TextView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Eco"></TextView>
+                        </TableRow>
+                    </TableLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:id="@+id/map_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/driving_state_layout"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="10dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/txt_alert_map"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@color/dash_blue"
+                            android:gravity="center"
+                            android:text="@string/label_alert_map"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_label3"></TextView>
+                        <fragment
+                            android:id="@+id/map_fragment"
+                            class="com.here.android.mpa.mapping.AndroidXMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            ></fragment>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/whitebg"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_layout">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Risk Alerts"
+                        android:textColor="#001A46"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRiskAlert_lastDrive"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:spanCount="3"
+                    android:scrollbars="vertical"
+                    tools:itemCount="3"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/cardview" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/risk_list_Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/dash_blue"
+                        android:gravity="center"
+                        android:text="@string/label_alert_list"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+                    <TableLayout
+                        android:id="@+id/linearLayout10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="@color/light_gray"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/risk_list_Title">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_column="1"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:text="@string/title_trip"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_column="1"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:text="@string/title_alert"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/txt_speed_limit"
+                                app:layout_constraintStart_toEndOf="@+id/textView5"
+                                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+                            <TextView
+                                android:id="@+id/txt_speed_limit"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_column="1"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:text="@string/title_time"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/txt_speed"
+                                app:layout_constraintStart_toEndOf="@+id/textView6"
+                                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                            <TextView
+                                android:id="@+id/txt_speed"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_column="1"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:text="@string/title_distance"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/textView7"
+                                app:layout_constraintStart_toEndOf="@+id/txt_speed_limit"
+                                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_column="1"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:text="@string/title_sl_ps"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/textView7"
+                                app:layout_constraintStart_toEndOf="@+id/txt_speed_limit"
+                                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:text="@string/title_speed"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_column="1"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:text="@string/title_zip"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"></TextView>
+                        </TableRow>
+                    </TableLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/risk_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+                        tools:itemCount="7" />
+
+                    <TextView
+                        android:id="@+id/no_record"
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp"
+                        android:gravity="center"
+                        android:text="No Risk Alert"
+                        android:textSize="20sp"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/title_copyright"
+            android:gravity="center"
+            android:background="@color/color_title"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/parent"
+            ></TextView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
